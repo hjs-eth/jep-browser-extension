@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { padding: 20px; font-family: sans-serif; }
+    label { display: block; margin: 10px 0; }
+    input[type="number"] { width: 100px; }
+  </style>
+</head>
+<body>
+  <h1>JEP Guard 设置</h1>
+  <label>
+    高风险阈值 (USDC):
+    <input type="number" id="threshold" min="0" step="10" value="100">
+  </label>
+  <label>
+    <input type="checkbox" id="autoBlock"> 自动拦截高风险交易
+  </label>
+  <button id="save">保存</button>
+  <p id="status"></p>
+  <script src="options.js"></script>
+</body>
+</html>
