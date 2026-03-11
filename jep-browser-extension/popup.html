@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { width: 300px; padding: 10px; font-family: sans-serif; }
+    h2 { font-size: 16px; margin-top: 0; }
+    .stats { background: #f5f5f5; padding: 8px; border-radius: 4px; }
+    .risk { color: #ff4444; font-weight: bold; }
+    button { width: 100%; padding: 8px; margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <h2>🛡️ JEP Guard</h2>
+  <div class="stats">
+    <p>已拦截风险交易: <span id="blocked">0</span></p>
+    <p>当前风险等级: <span id="risk" class="risk">低</span></p>
+  </div>
+  <button id="viewLogs">查看日志</button>
+  <button id="openSettings">设置</button>
+  <script src="popup.js"></script>
+</body>
+</html>
