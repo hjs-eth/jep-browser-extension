@@ -2,7 +2,7 @@ const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  mode: 'development', // 生产模式可改为 'production'
+  mode: 'development',
   entry: {
     background: './src/background.js',
     content: './src/content.js',
@@ -13,7 +13,12 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true, // 每次构建前清理 dist 文件夹
+    clean: true,
+  },
+  resolve: {
+    fallback: {
+      crypto: require.resolve('crypto-browserify'),
+    },
   },
   module: {
     rules: [
@@ -36,7 +41,7 @@ module.exports = {
         { from: 'src/popup.html', to: 'popup.html' },
         { from: 'src/options.html', to: 'options.html' },
         { from: 'src/logs.html', to: 'logs.html' },
-        { from: 'src/icons', to: 'icons', noErrorOnMissing: true }, // 如果没有图标文件夹也不报错
+        { from: 'src/icons', to: 'icons', noErrorOnMissing: true },
       ],
     }),
   ],
