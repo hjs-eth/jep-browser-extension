@@ -2,11 +2,11 @@
   "manifest_version": 3,
   "name": "JEP Guard",
   "version": "1.0.0",
-  "description": "Protect your crypto transactions from malicious AI agents with verifiable JEP receipts.",
+  "description": "保护您的加密交易免受恶意AI代理侵害，生成可验证的JEP收据。",
   "permissions": [
     "storage",
     "activeTab",
-    "scripting"
+    "unlimitedStorage"
   ],
   "host_permissions": [
     "https://*.gate.com/*",
@@ -28,17 +28,7 @@
     }
   ],
   "action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "16": "icons/icon16.png",
-      "48": "icons/icon48.png",
-      "128": "icons/icon128.png"
-    }
-  },
-  "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
+    "default_popup": "popup.html"
   },
   "options_ui": {
     "page": "options.html",
